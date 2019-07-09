@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'APIResource'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of APIResource.'
+  s.summary          = 'APIResource Management Library'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Management your APIResource with this Library
                        DESC
 
-  s.homepage         = 'https://github.com/sopthfg@gmail.com/APIResource'
+  s.homepage         = 'https://github.com/onemoonStudio/APIResource'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'sopthfg@gmail.com' => 'onemoonstudio@gmail.com' }
-  s.source           = { :git => 'https://github.com/sopthfg@gmail.com/APIResource.git', :tag => s.version.to_s }
+  s.author           = { 'onemoon' => 'sopthfg@gmail.com' }
+  s.source           = { :git => 'https://github.com/onemoonStudio/APIResource.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
 
-  # s.source_files = 'APIResource/Classes/**/*'
   s.source_files = 'APIResource/Source/**/*'
   
   # s.resource_bundles = {
