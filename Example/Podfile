@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'APIResource_Example' do
+  pod 'APIResource', :path => '../'
+
+  target 'APIResource_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
