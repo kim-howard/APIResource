@@ -1,0 +1,16 @@
+PODS:
+  - APIResource (0.1.0)
+
+DEPENDENCIES:
+  - APIResource (from `../`)
+
+EXTERNAL SOURCES:
+  APIResource:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  APIResource: a3b432461b471a7392bdac0e79a5193aab5319bf
+
+PODFILE CHECKSUM: d95600fd73721447a41588b89bce23fec0775808
+
+COCOAPODS: 1.7.3

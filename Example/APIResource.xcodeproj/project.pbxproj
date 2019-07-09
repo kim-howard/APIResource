@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9495475A5B763699B7503966 /* Pods_APIResource_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C242BFDD49DEB3EF23DA4EE /* Pods_APIResource_Example.framework */; };
+		D9FF78A222D4DEFC00AF6DC3 /* APIResource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FF78A122D4DEFC00AF6DC3 /* APIResource.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +44,11 @@
 		607FACE51AFB9204008FA782 /* APIResource_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APIResource_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		810C7F676C47E7501CC5E9D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		810C7F676C47E7501CC5E9D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9F07FA4792765754BEECBF32 /* Pods-APIResource_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIResource_Tests.release.xcconfig"; path = "Target Support Files/Pods-APIResource_Tests/Pods-APIResource_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		AF3E6B73E7D6950457D4EBC9 /* APIResource.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = APIResource.podspec; path = ../APIResource.podspec; sourceTree = "<group>"; };
-		EE3C33050DCBD0E47E859A06 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		AF3E6B73E7D6950457D4EBC9 /* APIResource.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = APIResource.podspec; path = ../APIResource.podspec; sourceTree = "<group>"; };
+		D9FF78A122D4DEFC00AF6DC3 /* APIResource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIResource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3C33050DCBD0E47E859A06 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FF78A222D4DEFC00AF6DC3 /* APIResource.framework in Frameworks */,
 				9495475A5B763699B7503966 /* Pods_APIResource_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,13 +150,13 @@
 				4B6BD9C8034865342148469E /* Pods-APIResource_Tests.debug.xcconfig */,
 				9F07FA4792765754BEECBF32 /* Pods-APIResource_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		C2A7DD0513A1B5A9B92249D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D9FF78A122D4DEFC00AF6DC3 /* APIResource.framework */,
 				2C242BFDD49DEB3EF23DA4EE /* Pods_APIResource_Example.framework */,
 				0C0C763746D637DA0E460664 /* Pods_APIResource_Tests.framework */,
 			);
@@ -227,6 +230,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

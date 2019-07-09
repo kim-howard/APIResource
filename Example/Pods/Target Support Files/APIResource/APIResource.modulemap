@@ -1,0 +1,6 @@
+framework module APIResource {
+  umbrella header "APIResource-umbrella.h"
+
+  export *
+  module * { export * }
+}
