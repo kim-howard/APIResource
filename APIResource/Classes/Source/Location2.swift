@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+public class NewLocation: NSObject {
+    public func log() {
+        print("new location")
+    }
+}
