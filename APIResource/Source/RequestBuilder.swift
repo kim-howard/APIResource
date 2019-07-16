@@ -8,21 +8,32 @@
 
 import Foundation
 
+/// Builder Pattern
+/// cachePolicy and timeoutInterval are default value
 public class RequestBuilder {
     
     // MARK: - Property
     
     public var apiResource: APIResource
-    public var cachePolicy: URLRequest.CachePolicy = .returnCacheDataElseLoad
-    public var timeoutInterval: TimeInterval = TimeInterval(5.0)
+    public var cachePolicy: URLRequest.CachePolicy = .useProtocolCachePolicy
+    public var timeoutInterval: TimeInterval = TimeInterval(60.0)
     
     // MARK: - Initializer
     
+    /// Initializer with APIResource
+    ///
+    /// - Parameter apiResource: APIResource
     public init(_ apiResource: APIResource) {
         self.apiResource = apiResource
-        
     }
     
+    /// Initializer with APIResource
+    /// you can configure URLRequest cachePolicy and timeout with this Initilizer
+    ///
+    /// - Parameters:
+    ///   - apiResource: APIResource
+    ///   - cachePolicy: URLRequest.CachePolicy
+    ///   - timeout: URLRequest timeoutInterval
     public init(_ apiResource: APIResource, _ cachePolicy: URLRequest.CachePolicy?, _ timeout: TimeInterval?) {
         self.apiResource = apiResource
         
@@ -37,30 +48,26 @@ public class RequestBuilder {
     
     // MARK: - Method
     
-    public func build() -> URLRequest {
+    public func build() throws -> URLRequest {
         
-        guard var urlComponents = URLComponents(string: apiResource.urlString) else {
-            fatalError("components is not created")
+        guard var urlComponents = URLComponents(url: apiResource.baseURL, resolvingAgainstBaseURL: true) else {
+            throw RequestBuilderError.baseURLToComponent
         }
         
-        // urlString 과 별개로 host를 변경하고 싶을 때
-        if let host = apiResource.host {
-            urlComponents.host = host
+        if let path = apiResource.path {
+            if path[path.startIndex] == "/" {
+                urlComponents.path = path
+            } else {
+                urlComponents.path = "/" + path
+            }
         }
         
-        // urlString과 별개로 path 를 변경하고 싶을 때
-        if let paths = apiResource.paths, !paths.isEmpty {
-            let path = paths.joined(separator: "/")
-            urlComponents.path += "/" + path
-        }
-        
-        // urlString과 별개로 query 를 변경하고 싶을 때
         if let query = apiResource.query, !query.isEmpty {
             urlComponents.queryItems = query.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
         }
         
         guard let url = urlComponents.url else {
-            fatalError("component url is akward : \(String(describing: urlComponents.url))")
+            throw RequestBuilderError.assembleURL(result: String(describing: urlComponents.url))
         }
         
         // last setup with headers and method
@@ -74,13 +81,13 @@ public class RequestBuilder {
     ///   - headers: HTTP header
     ///   - method: HTTP Method
     /// - Returns: result URLRequest
-    private func setupRequest(_ url: URL, headers: [String: Any]?, method: HTTPMethod) -> URLRequest {
+    private func setupRequest(_ url: URL, headers: [String: String]?, method: HTTPMethod) -> URLRequest {
         var resultRequest = URLRequest(url: url,
                                        cachePolicy: cachePolicy,
                                        timeoutInterval: timeoutInterval)
         if let headers = headers {
             for header in headers {
-                resultRequest.addValue("\(header.value)", forHTTPHeaderField: header.key)
+                resultRequest.addValue(header.value, forHTTPHeaderField: header.key)
             }
         }
         resultRequest.httpMethod = apiResource.method.rawValue
