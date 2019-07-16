@@ -14,52 +14,52 @@ class ViewController: UIViewController {
     @IBOutlet weak var centerLabel: UILabel!
     
     // Thank you jsonplaceholder
-    private let testAPIResource = APIResource("https://jsonplaceholder.typicode.com/posts/1")
+//    private let testAPIResource = APIResource("https://jsonplaceholder.typicode.com/posts/1")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //        request()
-        simpleRequest()
+//        simpleRequest()
     }
     
-    private func request() {
-        let dataTask = URLSession(configuration: .default).dataTask(with: testAPIResource.urlRequest()) { [weak self] (data, _, error) in
-            guard let self = self else { return }
-            var result = ""
-            if let error = error {
-                result = "Error: Check Your Error"
-            }
-            if let data = data {
-                do {
-                    let jsonData: TestModel = try JSONDecoder().decode(TestModel.self, from: data)
-                    print(jsonData)
-                    result = "Good !"
-                } catch {
-                    result = "Error with Decode Data"
-                }
-                DispatchQueue.main.async {
-                    self.centerLabel.text = result
-                }
-            }
-        }
-        dataTask.resume()
-    }
+//    private func request() {
+//        let dataTask = URLSession(configuration: .default).dataTask(with: testAPIResource.urlRequest()) { [weak self] (data, _, error) in
+//            guard let self = self else { return }
+//            var result = ""
+//            if let error = error {
+//                result = "Error: Check Your Error"
+//            }
+//            if let data = data {
+//                do {
+//                    let jsonData: TestModel = try JSONDecoder().decode(TestModel.self, from: data)
+//                    print(jsonData)
+//                    result = "Good !"
+//                } catch {
+//                    result = "Error with Decode Data"
+//                }
+//                DispatchQueue.main.async {
+//                    self.centerLabel.text = result
+//                }
+//            }
+//        }
+//        dataTask.resume()
+//    }
     
-    private func simpleRequest() {
-        testAPIResource.get { (data) in
-            var result = ""
-            if let data = data {
-                do {
-                    let jsonData: TestModel = try JSONDecoder().decode(TestModel.self, from: data)
-                    print(jsonData)
-                    result = "Good !"
-                } catch {
-                    result = "Error with Decode Data"
-                }
-                DispatchQueue.main.async {
-                    self.centerLabel.text = result
-                }
-            }
-        }
-    }
+//    private func simpleRequest() {
+//        testAPIResource.get { (data) in
+//            var result = ""
+//            if let data = data {
+//                do {
+//                    let jsonData: TestModel = try JSONDecoder().decode(TestModel.self, from: data)
+//                    print(jsonData)
+//                    result = "Good !"
+//                } catch {
+//                    result = "Error with Decode Data"
+//                }
+//                DispatchQueue.main.async {
+//                    self.centerLabel.text = result
+//                }
+//            }
+//        }
+//    }
 }

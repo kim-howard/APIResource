@@ -1,17 +1,18 @@
+<img src="./images/palette.png" width="40%">
+
 # :rainbow: APIResource
 
-[![CI Status](https://img.shields.io/travis/sopthfg@gmail.com/APIResource.svg?style=flat)](https://travis-ci.org/sopthfg@gmail.com/APIResource)
+[![CI Status](https://img.shields.io/travis/onemoonstudio/APIResource.svg?style=flat)](https://travis-ci.org/onemoonstudio/APIResource)
 [![Version](https://img.shields.io/cocoapods/v/APIResource.svg?style=flat)](https://cocoapods.org/pods/APIResource)
 [![License](https://img.shields.io/cocoapods/l/APIResource.svg?style=flat)](https://cocoapods.org/pods/APIResource)
 [![Platform](https://img.shields.io/cocoapods/p/APIResource.svg?style=flat)](https://cocoapods.org/pods/APIResource)
-![author](https://img.shields.io/badge/author-oemoon-red.svg)
+![author](https://img.shields.io/badge/author-onemoon-red.svg)
 
-## Example
+## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+```swift
 
-## Requirements
-
+```
 ## Installation
 
 APIResource is available through [CocoaPods](https://cocoapods.org). To install
