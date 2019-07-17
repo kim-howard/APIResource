@@ -237,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				D9FF78B422D4E43800AF6DC3 /* APIResource.swift */,
+				D988FC9A22DC66D700EF5B64 /* ResourceBase.swift */,
 				D9FF78B522D4E43800AF6DC3 /* RequestBuilder.swift */,
 				D988FC9C22DC8A4B00EF5B64 /* Error */,
 				D9FF78B622D4E43800AF6DC3 /* Helper */,
@@ -249,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				D9FF78B822D4E43800AF6DC3 /* HTTPMethod.swift */,
-				D988FC9A22DC66D700EF5B64 /* ResourceBase.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";

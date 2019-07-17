@@ -10,18 +10,29 @@ import Foundation
 import APIResource
 
 enum PostmanEchoAPI {
-    case get
-    case post
+    case getRequest
 }
 
 extension PostmanEchoAPI: ResourceBase {
     
-    var urlString: String? {
+    var host: String? {
         switch self {
-        case .get:
-            return "https://postman-echo.com/get?foo1=bar1&foo2=bar2"
-        default:
-            return nil
+        case .getRequest:
+            return "https://postman-echo.com/"
+        }
+    }
+    
+    var path: String? {
+        switch self {
+        case .getRequest:
+            return "/get"
+        }
+    }
+    
+    var queryString: String? {
+        switch self {
+        case .getRequest:
+            return "?foo1=bar1&foo2=bar2"
         }
     }
     

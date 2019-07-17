@@ -16,7 +16,7 @@ public protocol ResourceBase {
     
     // MARK: - API Base
     
-    // urlString  ||  host + path + (query || queryString)
+    // USE urlString  ||  host + path + (query || queryString)
     // NOT BOTH
     
     ///
