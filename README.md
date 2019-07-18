@@ -1,12 +1,11 @@
-<img src="./images/palette.png" width="40%" style="margin: 0 auto">
+<img src="https://github.com/onemoonStudio/APIResource/blob/master/images/palette.png" width="40%" style="margin: 0 auto">
 
 # :rainbow: APIResource
 
 <div style="text-align: center">
-  <img src="https://img.shields.io/travis/onemoonstudio/APIResource.svg?style=flat">
   <img src="https://img.shields.io/cocoapods/v/APIResource.svg?style=flat">
-  <img src="https://img.shields.io/cocoapods/l/APIResource.svg?style=flat">
-  <img src="https://img.shields.io/cocoapods/p/APIResource.svg?style=flat">
+  <img src="https://img.shields.io/cocoapods/l/APIResource.svg?style=flat&color=blueviolet">
+  <img src="https://img.shields.io/cocoapods/p/APIResource.svg?style=flat&color=yellow">
   <img src="https://img.shields.io/badge/author-onemoon-red.svg">
 </div>
 
@@ -16,7 +15,7 @@
 
 You can use this library **simply** **URL with APIResource**, but also can use with **enum and ResourceBase**. please check Usage
 
-Thanks to [PostmanEcho API](https://docs.postman-echo.com/?version=latest), I can test my features and wrote it with XCTestClass. so enjoy this Library and your star will be helpful to me
+so enjoy this Library and your **star** will be helpful to me
 
 
 
@@ -37,9 +36,9 @@ pod 'APIResource'
 - [ ] initialize APIResource with ResourceBase
 - [ ] APIResource makes URLRequest 
 
+Thanks to [PostmanEcho API](https://docs.postman-echo.com/?version=latest), I can test my features and wrote it with XCTestClass.
 
-
-features what not checked are not enough tested 
+empty box are features tested not enough
 
 
 
@@ -85,10 +84,12 @@ let apiResource: APIResource = PostmanEchoAPI.getRequest.apiResource
 
 
 
-### Reference
+### Inspired By
 
 [Alamofire](https://github.com/Alamofire/Alamofire)
+
 [Just](https://github.com/dduan/Just)
+
 [Moya](https://github.com/Moya/Moya)
 
 
